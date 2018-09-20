@@ -13,4 +13,6 @@ Pour se faire, nous avons besoin :
 
 * Construire l'image avec la commande `docker image build -t my_server .`
 * Exécuter l'image `docker run -p 5000 my_server`
-* Se rendre sur l'URL [http://10.10.0.201:5000/] et recharger la page plusieurs fois
+* Depuis l'hôte, appelé la commande `curl localhost:5000` plusieurs fois
+* Faire un `docker container restart`
+* Rappelé la commande `curl localhost:5000`

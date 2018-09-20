@@ -1,12 +1,12 @@
-## Construire une image depuis un Dockerfile
+# Installer une registry privée
 
-On souhaite créer une image permettant d'installer un serveur Flask python.
+Consulter la page [https://hub.docker.com/_/registry/]
 
-Pour se faire, nous avons besoin :
-
-* d'une source centos 7
-* de déclarer le dépôt `epel-release`
-* d'installer PIP (package python-pip)
-* d'installer les packages pythons suivants : redis, flask
-* exposer le port 5000
-* utiliser le code *server.py* pour exécuter le serveur
+* Instancier la registry `docker run -d -p 5000:5000 --restart=always --name registry registry:2.5.2`
+* A quoi sert `--restart=always` ?
+* A quoi sert `--name registry` ?
+* Tagguer l'image `docker image tag my_server localhost:5000/my_server`
+* Que retourne `docker image ls` ?
+* Pousser l'image `docker image push localhost:5000/my_server`
+* Entrer dans le conteneur du registry `docker exec -it registry sh`
+  * Que contient le répertoire */var/lib/registry* `find /var/lib/registry` ?
