@@ -2,20 +2,19 @@
 
 ## Pull d'une image
 
-* Téléchargez une image alpine avec la commande `docker pull centos:7`
-
-* Que pouvez vous dire sur cette image avec :
+* Télécharger une image centos avec la commande `docker pull centos:7`
+* Que dire sur cette image avec les commandes :
   * `docker image ls` ?
   * `docker image inspect centos:7` ?
   * `docker image history centos:7` ?
 
 ## Exécution d'un conteneur
 
-* Exécutez le conteneur avec la commande `docker container run -it centos:7`
+* Exécuter le conteneur avec la commande `docker container run -it centos:7`
 * Afficher la configuration réseau `ifconfig`
 * Installer le package `yum install net-tools`
-* Quittez le conteneur Ctrl+D
-* Exécutez le conteneur avec la commande `docker container run -it centos:7`
+* Quitter le conteneur Ctrl+D
+* Exécuter le conteneur avec la commande `docker container run -it centos:7`
 * Afficher la configuration réseau `ifconfig`
   * Que se passe t'il ?
 

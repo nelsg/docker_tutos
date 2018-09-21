@@ -5,10 +5,10 @@
 
 * Configurer swarm :
   * sur `docker1` : `docker swarm init --advertise-addr=10.10.0.201`
-  * Pour récupérer le token d'un worker : `docker swarm join-token worker`
-  * Pour récupérer le token d'un manager : `docker swarm join-token manager`
-  * Configurer swarm en worker sur `docker2`
-  * Configurer swarm en manager sur `docker3`
+  * pour récupérer le token d'un worker : `docker swarm join-token worker`
+  * pour récupérer le token d'un manager : `docker swarm join-token manager`
+  * configurer swarm en worker sur `docker2`
+  * configurer swarm en manager sur `docker3`
 
 * Commenter la sortie des commandes :
   * `docker node ls`

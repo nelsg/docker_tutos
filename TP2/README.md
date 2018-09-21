@@ -34,8 +34,8 @@ sudo usermod -aG docker vagrant
 # Rouvrir le terminal
 ```
 
-Décrivez ce qui se passe avec la commande `docker run hello-world` ?
+Décrir ce qui se passe avec la commande `docker run hello-world` ?
 
-Commenter la sortie des commandes suivantes :
+Commenter la sortie des commandes :
   * `docker version`
   * `docker info`

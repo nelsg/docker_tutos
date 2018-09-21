@@ -1,14 +1,14 @@
 # Créer une image
 
-* Rechercher la premier instance du conteneur avec ifconfig `docker container ps -a`
+* Rechercher la première instance du conteneur avec ifconfig `docker container ps -a`
 * Appliquer un tag `docker container commit 0123456789abcdef my_centos`
 * Exécuter le conteneur en mode intéractif `docker container run -it my_centos bash`
-* Dans le conteneur, que pouvez-vous dire du retour des commandes suivantes :
+* Dans le conteneur, que pouvez-vous dire du retour des commandes :
   * `ifconfig` ?
   * `mount` ?
   * `hostname` ?
 * Exécuter le conteneur en mode détaché `docker container run -d my_centos sleep 300`
-* Que pouvez-vous dire du retour des commandes suivantes sur l'hôte :
+* Que pouvez-vous dire du retour des commandes sur l'hôte :
   * `ifconfig` ?
   * `mount` ?
   * `hostname` ?

@@ -5,7 +5,6 @@ On souhaite créer une image permettant d'installer un serveur Flask python avec
 Pour se faire, nous avons besoin :
 
 * D'une machine `redis`
-
 * D'un server `front`:
   * d'une source centos 7
   * de déclarer le dépôt `epel-release`
@@ -13,10 +12,9 @@ Pour se faire, nous avons besoin :
   * d'installer les packages pythons suivants : redis, flask
   * exposer le port 5000 sur le port 80 de l'hôte
   * utiliser le code *server.py* pour exécuter le serveur
-  * lié avec la machine redis via le réseau
+  * lier avec la machine redis via le réseau
 
-* Depuis l'hôte, appelé la commande `curl localhost:80` plusieurs fois
-
+* Depuis l'hôte, appeler la commande `curl localhost:80` plusieurs fois
 * Détruire et redémarrer le conteneur `front` :
   ```bash
   docker rm --force front
@@ -29,7 +27,6 @@ Pour se faire, nous avons besoin :
 * Sur l'hôte :
   * Rechercher le réseau docker créé `docker network ls`
   * Commenter la sortie de la commande `docker network inspect 012345`
-
 * Détruire tous les conteneurs, refaire la manipulation en créan au préalable le réseau avec la commande `docker network create -d bridge --opt encrypted my_server_bridge`
 * Commenter la sortie des commandes
   * `docker network inspect my_server_bridge`
