@@ -8,6 +8,7 @@ hits = 0
 
 @app.route('/')
 def hello():
+    global hits
     hits = hits + 1
     return '''Hello World! I have been seen %s times.\n
     My Host name is %s\n\n''' % (hits, host)

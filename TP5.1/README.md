@@ -14,7 +14,8 @@ Pour se faire, nous avons besoin :
 Une fois le Dockerfile prêt :
 
 * Construire l'image avec la commande `docker image build -t my_server .`
-* Exécuter l'image `docker run -p 5000 my_server`
+* Exécuter l'image `docker run -p 5000 --name my_server my_server`
 * Depuis l'hôte, appelé la commande `curl localhost:5000` plusieurs fois
-* Faire un `docker container restart`
+* Faire un `docker container restart my_server`
 * Rappelé la commande `curl localhost:5000`
+* Que retrourne la commande `docker container top my_server`
