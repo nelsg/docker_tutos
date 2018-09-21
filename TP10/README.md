@@ -1,4 +1,6 @@
-# Configurer swarm
+# Swarm
+
+## Installer et configurer Swarm
 
 * Installer docker sur les machines `docker2` et `docker3` : `./install_docker.sh`
 * Se reconnecter sur `docker2` et `docker3`
@@ -14,6 +16,8 @@
   * `docker node ls`
   * `docker info`
   * `docker node inspect <node_id>`
+
+## Déployer la stack
 
 * Déclarer une stack : `docker stack deploy --compose-file=docker-compose.yml my_server`
 * Corriger le fichier *docker-compose.yml* pour résoudre le problème
@@ -42,3 +46,10 @@
 
 * Augmenter le nombre de réplicats `docker service scale my_server_front=5`
 * Que retourne `curl 10.10.0.201:80` ?
+* Augmenter le nombre de réplicats à 50
+
+## Comment fonctionne l'overlay
+
+## Mise en place d'un répertoire partagé
+
+Installer un serveur NFS sur `docker1`
