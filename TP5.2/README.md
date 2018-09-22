@@ -22,3 +22,6 @@ Etape 2 :
 Etape 3 :
 * mettre en place `exec` : `exec <cmd>`
 * Reconstruire l'image et le conteneur, que retourne `docker container top my_server_sec` ?
+
+Etape 4 :
+* Variabiliser le uid et le gid
