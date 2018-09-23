@@ -1,4 +1,4 @@
-# Namespaces
+# Exercice autour des Namespaces
 
 ## Afficher les namespaces des processus
 
@@ -46,35 +46,3 @@
 * Surveiller : `sudo ip netns monitor`
 * Exécuter un processus dans un netns : `sudo ip netns exec ns1 ifconfig -a`
 * Supprimer le namespace réseau `sudo ip netns del ns1`
-
-# Utilisation des CGroups
-
-## Utilisation de `nice`
-
-* La commande `stress` permet de stresser une machine, petit exemple :
-  ```bash
-  sudo apt install stress
-  # Exécuter des commandes avec nice et sans
-  nice stress -c 1 &
-  stress -c 1 &
-  # Afficher l'utilisation CPU
-  htop
-  ```
-
-Sur une machine 1 CPU, un processus utilise 90%, l'autre utilise 10%.
-
-## Utilisation des CGroups
-
-* Installation `sudo apt install cgroup-bin`
-* Création d'un groupe `foo` pour l'uid:gid vagrant:vagrant :
-  ```bash
-  sudo cgcreate -a vagrant:vagrant -t vagrant:vagrant -g cpu:/foo
-  ```
-* Lui affecter la priorité processeur la plus basse (c'est 1024 par défaut) :
-  ```bash
-  cgset -r cpu.shares=2 foo
-  ```
-* Exécuter :
-  ```bash
-  cgexec -g cpu:foo stress -c 1
-  ```
