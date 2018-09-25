@@ -7,15 +7,15 @@
 
 ## Namespace UTS
 
-* Que retourne la commande `uname -u` ?
+* Que retourne la commande `uname -n` ?
 * Exécuter les commandes suivantes :
   ```bash
   sudo unshare -u /bin/bash
   hostname
   hostname ubuntu-ns1
   ```
-* Que retourne la commande `uname -u` ?
-* Que retourne la commande `uname -u` sur un autre terminal ?
+* Que retourne la commande `uname -n` ?
+* Que retourne la commande `uname -n` sur un autre terminal ?
 
 ## Namespace MNT
 
