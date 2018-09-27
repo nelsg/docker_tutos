@@ -2,14 +2,10 @@
 
 ## Déployer la stack
 
+Récupérer le fichier `docker-compose.yml` du TP9
 * Déclarer une stack : `docker stack deploy --compose-file=docker-compose.yml my_server`
 * Corriger le fichier *docker-compose.yml* pour résoudre le problème
 * Que retourne la commande `docker image ls` sur `docker2` et `docker3` ?
-* Sur `docker1`, que retourne la commande `docker service ps my_server_front` ?
-* Quel est le problème et comment le résoudre proprement ?
-
-* Pousser l'image *10.10.0.201:5000/my_server* sur la registry
-* Modifier le fichier *docker-compose.yml* pour prendre en compte cette image
 
 * Supprimer l'ancienne stack `docker stack rm my_server`
 * La recréer `docker stack deploy --compose-file=docker-compose.yml my_server`
