@@ -1,0 +1,25 @@
+version: '2'
+services:
+  traefik:
+    image: traefik:camembert-alpine
+    restart: always
+    command: --web
+    container_name: traefik
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "$PWD/traefik.toml:/traefik.toml"
+    ports:
+- "80:80"
+      - "8080:8080"
+    networks:
+      lb_network:
+  webapp:
+    image: dockercloud/hello-world
+    labels:
+      - "traefik.port=80"
+      - "traefik.backend=webapp"
+      - "traefik.frontend.rule=Host:webapp.domain.tld"
+    networks:
+      lb_network:
+networks:
+  lb_network:

@@ -1,0 +1,5 @@
+#!/bin/bash
+groupadd --gid 991 my_server
+useradd --system --no-create-home --shell /bin/bash --gid 991 --uid 991 my_server mkdir –p /home/my_server
+chown -R my_server:my_server /home/my_server
+exec chroot --userspec=my_server / python /src/server.py
