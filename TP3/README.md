@@ -23,6 +23,7 @@
 * Exécuter le conteneur avec `docker container run -d centos:7 bash`
 * Depuis un autre terminal, déterminer l'id du conteneur avec `docker ps`
 * Afficher les logs `docker container logs 0123456789abcdef --follow` (équivalent à une `tail -f`)
+* Depuis un autre terminal, se connecter dans le conteneur : `docker container exec -it 0123456789abcdef bash`
 * Dans le conteneur, exécuter la commande `echo "docker"`
   * Que se passe t'il dans le terminal affichant les logs ?
 * Dans un autre terminal, exécuter les commandes :

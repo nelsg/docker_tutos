@@ -16,6 +16,7 @@
   ```
 * Que retourne la commande `uname -n` ?
 * Que retourne la commande `uname -n` sur un autre terminal ?
+* Que permet de faire la commande `unshare` ?
 
 ## Namespace MNT
 
