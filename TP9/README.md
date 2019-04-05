@@ -1,5 +1,6 @@
 ## Mise en oeuvre de docker-compose
 
+* Installer *pip* : `sudo apt install python-pip`
 * Installer *docker-compose* : `sudo pip install docker-compose`
 * Vérifier la version `docker-compose --version`
 * Créer un fichier docker-compose.yml pour recréer redis et le front

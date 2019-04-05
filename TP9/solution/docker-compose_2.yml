@@ -1,0 +1,18 @@
+version: "3"
+services:
+  redis:
+    image: redis
+    networks:
+      - my_server_bridge
+  front:
+    build: .
+    image: my_server
+    networks:
+      - my_server_bridge
+    ports:
+      - 80:5000
+    depends_on:
+      - redis
+networks:
+  my_server_bridge:
+    driver: bridge
